@@ -2,13 +2,13 @@ import express from 'express';
 import loaders from './loaders';
 
 const startServer = async () => {
-  const app = express();
+    const app = express();
 
-  await loaders({ app });
+    await loaders({ app });
 
-  app.listen(5000, () => {
-    console.log(`[Server]: Server is running on port 5000`);
-  });
+    app.listen(5000, () => {
+        console.log(`[Server]: Server is running on port 5000`);
+    });
 };
 
 startServer();
