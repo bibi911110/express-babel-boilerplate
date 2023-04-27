@@ -7,9 +7,11 @@ const expressLoader = ({ app }) => {
     app.use(cors({ origin: '*' }));
     app.use(bodyParser.urlencoded({ extended: false }));
     app.use(bodyParser.json());
+
+    console.log(`[Loader]: Express config loaded`);
   } catch (error) {
     console.log(error);
-    process.exit(0);
+    process.exit(1);
   }
 };
 
