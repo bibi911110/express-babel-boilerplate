@@ -1,6 +1,7 @@
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import router from '../routes';
+import { errorHandler } from '../utils/errorHandler';
 
 const expressLoader = ({ app }) => {
     try {
@@ -11,6 +12,9 @@ const expressLoader = ({ app }) => {
 
         // set routers
         app.use('/api', router);
+
+        // error handler
+        app.use(errorHandler);
 
         console.log(`[Loader]: Express config loaded`);
     } catch (error) {

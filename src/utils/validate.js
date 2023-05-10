@@ -1,9 +1,9 @@
-const validate = (req, res, next) => async (schema) => {
+const validate = (schema) => async (req, res, next) => {
     const result = await schema.validate(req.body);
 
     if (result.error) {
         return res.status(400).json({
-            message: error.details[0].message,
+            message: result.error.details[0].message,
         });
     }
 
