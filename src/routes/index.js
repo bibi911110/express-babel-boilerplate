@@ -5,7 +5,7 @@ const router = Router();
 
 router.get('/test', (req, res) => {
     return res.json({
-        message: 'this is test router.',
+        message: 'This is test.',
     });
 });
 

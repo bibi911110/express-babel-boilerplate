@@ -8,7 +8,7 @@ const databaseLoader = async () => {
         // model sync
         await db.sync();
 
-        console.log(`[Loader]: Database connected`);
+        console.log(`Database connected`);
     } catch (error) {
         console.log(error.message);
         process.exit(1);

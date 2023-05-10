@@ -12,6 +12,8 @@ const errorHandler = (err, req, res, next) => {
         return next(err);
     }
 
+    console.log(err);
+
     const statusCode = err.statusCode || 500;
     const errorMessage = err.message || 'INTERNAL_ERROR';
 

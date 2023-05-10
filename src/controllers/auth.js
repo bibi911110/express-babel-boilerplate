@@ -3,7 +3,7 @@ import { CustomError } from '../utils/errorHandler';
 
 const login = (req, res, next) => {
     try {
-        throw new CustomError(401, 'Custom Error Test');
+        a;
     } catch (error) {
         next(error);
     }

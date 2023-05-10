@@ -16,7 +16,7 @@ const expressLoader = ({ app }) => {
         // error handler
         app.use(errorHandler);
 
-        console.log(`[Loader]: Express config loaded`);
+        console.log(`Express config loaded`);
     } catch (error) {
         console.log(error);
         process.exit(1);
