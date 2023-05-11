@@ -15,7 +15,7 @@ const errorHandler = (err, req, res, next) => {
     console.log(err);
 
     const statusCode = err.statusCode || 500;
-    const errorMessage = err.message || 'INTERNAL_ERROR';
+    const errorMessage = err.message || 'Internal Error';
 
     return res.status(statusCode).json({
         message: errorMessage,

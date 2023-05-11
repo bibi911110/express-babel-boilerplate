@@ -9,7 +9,7 @@ const User = db.define(
             defaultValue: DataTypes.UUIDV4,
             primaryKey: true,
         },
-        username: {
+        name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
